@@ -1,0 +1,67 @@
+@import '@angular/material/prebuilt-themes/indigo-pink.css';
+.d-flex{
+    display: flex;
+}
+.align-items-center{
+    align-items: center;
+}
+
+.gap-10{
+    gap: 10px;
+}
+
+
+html[dir="rtl"] {
+    body {
+      direction: rtl;
+      text-align: right;
+    }
+  
+    .mat-form-field {
+      text-align: right;
+    }
+  
+    .mat-table {
+      direction: rtl;
+    }
+  
+    .mat-paginator {
+      direction: rtl;
+    }
+  
+    .mat-header-cell, .mat-cell {
+      text-align: right;
+    }
+    mat-sidenav-content {
+        margin-right: 250px; // Adjust if needed
+        margin-left: 0 !important;
+      }
+  }
+  
+  html[dir="ltr"] {
+    body {
+      direction: ltr;
+      text-align: left;
+    }
+  
+    .mat-form-field {
+      text-align: left;
+    }
+  
+    .mat-table {
+      direction: ltr;
+    }
+  
+    .mat-paginator {
+      direction: ltr;
+    }
+  
+    .mat-header-cell, .mat-cell {
+      text-align: left;
+    }
+    mat-sidenav-content {
+        margin-left: 250px; // Default margin for LTR
+        margin-right: 0 !important;
+      }
+  }
+  

@@ -1,0 +1,65 @@
+<!-- Search Input -->
+<div class="mb-10">
+  <mat-form-field appearance="fill">
+    <mat-label>{{ 'SEARCH' | translate }}</mat-label>
+    <input matInput (keyup)="applyFilter($event)" [placeholder]="'SEARCH_PLACEHOLDER' | translate" />
+  </mat-form-field>
+</div>
+
+<!-- Add User Button -->
+<div class="mb-10">
+  <button mat-raised-button color="primary" (click)="openAddUserDialog()">
+    {{ 'ADD_USER' | translate }}
+  </button>
+</div>
+
+<!-- Loading Spinner -->
+<div *ngIf="loading" class="loading-spinner">
+  <mat-spinner></mat-spinner>
+</div>
+
+<!-- Users Table with Pagination -->
+<table mat-table [dataSource]="dataSource" matSort class="mat-elevation-z8" (matSortChange)="getUsers()">
+  <!-- ID Column -->
+  <ng-container matColumnDef="id">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header matSortDisableClear>{{ 'ID' | translate }}</th>
+    <td mat-cell *matCellDef="let user">{{ user.id }}</td>
+  </ng-container>
+
+  <!-- Name Column -->
+  <ng-container matColumnDef="username">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header matSortDisableClear>{{ 'USERNAME' | translate }}</th>
+    <td mat-cell *matCellDef="let user">{{ user.username }}</td>
+  </ng-container>
+
+  <!-- Role Column -->
+  <ng-container matColumnDef="role">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header matSortDisableClear>{{ 'ROLE' | translate }}</th>
+    <td mat-cell *matCellDef="let user">{{ userRoles[user.role] }}</td>
+  </ng-container>
+
+  <!-- Actions Column -->
+  <ng-container matColumnDef="actions">
+    <th mat-header-cell *matHeaderCellDef>{{ 'ACTIONS' | translate }}</th>
+    <td mat-cell *matCellDef="let user">
+      <button mat-icon-button color="primary" (click)="openEditUserDialog(user)">
+        <mat-icon>edit</mat-icon>
+      </button>
+      <button mat-icon-button color="warn" (click)="deleteUser(user.id)">
+        <mat-icon>delete</mat-icon>
+      </button>
+    </td>
+  </ng-container>
+
+  <!-- Header and Row Definitions -->
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+</table>
+
+<!-- Pagination Controls -->
+<mat-paginator class="mat-elevation-z8"
+               [length]="totalUsers"
+               [pageSize]="pageSize"
+               [pageSizeOptions]="[5, 10, 25, 100]"
+               (page)="pageChanged($event)">
+</mat-paginator>

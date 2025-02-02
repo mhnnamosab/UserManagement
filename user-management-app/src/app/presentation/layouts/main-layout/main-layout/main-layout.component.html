@@ -1,0 +1,38 @@
+<mat-sidenav-container class="sidenav-container">
+    <!-- Sidebar -->
+    <mat-sidenav #sidenav mode="side" [opened]="isSidebarOpen" class="sidenav">
+      <mat-nav-list>
+        <!-- Dashboard Link -->
+        <a mat-list-item routerLink="/dashboard">
+            <span class="d-flex align-items-center gap-10">
+                <mat-icon>dashboard</mat-icon>
+                <span>{{ 'DASHBOARD' | translate }}</span>
+            </span>
+        </a>
+  
+        <!-- Users Link -->
+        <a mat-list-item routerLink="/users" class="d-flex align-items-center">
+            <span class="d-flex align-items-center gap-10">
+
+          <mat-icon>people</mat-icon>
+          <span>{{ 'USERS' | translate }}</span>
+          </span>
+        </a>
+      </mat-nav-list>
+    </mat-sidenav>
+  
+    <!-- Main Content -->
+    <mat-sidenav-content [ngClass]="{ 'collapsed': !isSidebarOpen }">
+      <!-- Header -->
+      <app-header>
+        <button mat-icon-button (click)="toggleSidebar()">
+            <mat-icon>menu</mat-icon>
+        </button>
+      </app-header>
+  
+      <!-- Router Outlet -->
+      <div class="content">
+        <router-outlet></router-outlet>
+      </div>
+    </mat-sidenav-content>
+  </mat-sidenav-container>

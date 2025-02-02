@@ -1,0 +1,19 @@
+.sidenav-container {
+    height: 100vh;
+  }
+  
+  .sidenav {
+    width: 250px;
+  }
+  
+  .content {
+    padding: 16px;
+  }
+
+  .sidenav {
+    transition: margin-left 0.3s ease; 
+  }
+   
+  .mat-sidenav-content.collapsed {
+    margin: 0 !important;
+  }

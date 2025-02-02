@@ -1,0 +1,16 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\Controllers",
+    "\\Data",
+    "\\DTOs",
+    "\\Enums",
+    "\\Middleware",
+    "\\Migrations",
+    "\\Models",
+    "\\Utils",
+    "\\Validators"
+  ],
+  "SelectedNode": "\\Middleware",
+  "PreviewInSolutionExplorer": false
+}

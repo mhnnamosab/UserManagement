@@ -1,0 +1,18 @@
+{
+    "LOGIN": "Login",
+    "USERNAME": "Username",
+    "PASSWORD": "Password",
+    "SUBMIT": "Submit",
+    "APP_TITLE": "User Management System",
+    "DASHBOARD": "Dashboard",
+    "USERS": "Users",
+    "SEARCH": "Search",
+    "SEARCH_PLACEHOLDER": "Search by username",
+    "ADD_USER": "Add User",
+    "ID": "ID",
+    "ROLE": "Role",
+    "ACTIONS": "Actions",
+    "EDIT": "Edit",
+    "DELETE": "Delete"
+  }
+  
