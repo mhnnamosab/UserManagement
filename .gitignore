@@ -1,10 +1,13 @@
 # Ignore node_modules and environment files
 node_modules/
+FileContentIndex/
+.vs/
 # Ignore .NET build and env files
 UserManagementAPI/bin/
 UserManagementAPI/obj/
 UserManagementAPI/appsettings.*
 UserManagementAPI/.env
+UserManagementAPI/.vs/*
 
 
 
