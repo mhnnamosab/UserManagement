@@ -1,0 +1,2 @@
+﻿INSERT INTO Users (Username, Password, Role) VALUES ('admin', '$2a$11$QSGeo.5/DVpy5J9oGtsVqOMaHXgQKhbNZIPSDc6fEvlL9mHxlKLz6', 'Admin');
+INSERT INTO Users (Username, Password, Role) VALUES ('user1', '$2a$12$sdg8FsAD7gZd8sdfB20dG5sdf3dQEZkKc1pHbT/Kfw3pdL9uBdsXm', 'User');
