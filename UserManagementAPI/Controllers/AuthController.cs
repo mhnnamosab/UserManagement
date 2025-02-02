@@ -22,7 +22,6 @@ namespace UserManagementAPI.Controllers
             var result = await _authService.AuthenticateUserAsync(request);
             if (result == null)
                 return Unauthorized("Invalid username or password.");
-
             return Ok(result);
         }
     }
